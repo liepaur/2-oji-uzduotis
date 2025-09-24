@@ -3,6 +3,10 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <iomanip>
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 struct Studentas {
@@ -15,11 +19,30 @@ struct Studentas {
 void nuskaitymas(const string& failoVardas, vector<Studentas>& studentai);
 double baloSkaiciavimas(const Studentas& s);
 double baloSkaiciavimasMediana(const Studentas& s);
+void studentuGeneravimas(vector<Studentas>& studentai, int kiekis, int ndKiekis);
 void spausdinimas(const vector<Studentas>& studentai);
 
 int main() {
     vector<Studentas> studentai;
-    nuskaitymas("studentai10000.txt", studentai);
+    int pasirinkimas;
+    srand(time(0));
+    cout << "Pasirinkite duomenų šaltinį:" << endl;
+    cout << "1 - Skaityti iš failo" << endl;
+    cout << "2 - Generuoti atsitiktinai" <<endl;
+    cin >> pasirinkimas;
+    if (pasirinkimas == 1){
+        nuskaitymas("studentai10000.txt", studentai);
+    }
+    else if (pasirinkimas == 2){
+        int kiekis, ndKiekis;
+        cout << "Įveskite studentų skaičių:";
+        cin >> kiekis;
+        cout << "Įveskite namų darbų skaičių: ";
+        cin >> ndKiekis;
+        studentuGeneravimas(studentai, kiekis, ndKiekis);
+    } else {
+        cout << "Tokio pasirinkimo nėra!" << endl;
+    }
     spausdinimas(studentai);
 }
 
@@ -77,6 +100,20 @@ double baloSkaiciavimasMediana(const Studentas& s) {
         mediana = kopija[n/2];
     }
     return 0.4 * mediana + 0.6 * s.egz;
+}
+
+//Funkcija atsitiktiniam rezultatu generavimui
+void studentuGeneravimas(vector<Studentas>& studentai, int kiekis, int ndKiekis){
+    for (int i = 0; i < kiekis; i++) {
+        Studentas st;
+        st.vardas = "Vardas" + to_string(i+1);
+        st.pavarde = "Pavarde" + to_string(i+1);
+        for (int j = 0; j < ndKiekis; j++) {
+            st.nd.push_back(rand() % 10 + 1);
+        }
+        st.egz = rand() % 10 + 1; 
+        studentai.push_back(st);
+    }
 }
 
 // Funkcija galutinio balo spausdinimui
