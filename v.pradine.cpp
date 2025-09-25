@@ -31,7 +31,7 @@ int main() {
     cout << "2 - Generuoti atsitiktinai" << endl;
     cin >> pasirinkimas;
     if (pasirinkimas == 1) {
-        nuskaitymas("studentai10000.txt", studentai);
+        nuskaitymas("studentai1000000.txt", studentai);
     } else if (pasirinkimas == 2) {
         int kiekis, ndKiekis;
         cout << "Įveskite studentų skaičių:";
@@ -113,17 +113,17 @@ void spausdinimas(vector<Studentas>& studentai) {
              return a.vardas < b.vardas;
          });
     cout << fixed << setprecision(2);
-    cout << left << setw(12) << "Vardas"
-         << setw(12) << "Pavarde"
-         << setw(18) << "Galutinis (Vid.)"
-         << setw(18) << "Galutinis (Med.)"
+    cout << left << setw(15) << "Vardas"
+         << setw(15) << "Pavarde"
+         << setw(10) << "Galutinis (Vid.)"
+         << setw(10) << "Galutinis (Med.)"
          << endl;
-    cout << "--------------------------------------------------------" << endl;
+    cout << "------------------------------------------------------------" << endl;
     for (const auto& s : studentai) {
-        cout << left << setw(12) << s.vardas
-             << setw(12) << s.pavarde
-             << setw(18) << baloSkaiciavimas(s)
-             << setw(18) << baloSkaiciavimasMediana(s)
+        cout << left << setw(15) << s.vardas
+             << setw(15) << s.pavarde
+             << setw(10) << baloSkaiciavimas(s)
+             << setw(10) << baloSkaiciavimasMediana(s)
              << endl;
     }
 }
