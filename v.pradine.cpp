@@ -31,6 +31,12 @@ int main(){
     cout << "1 - Skaityti iš failo" << endl;
     cout << "2 - Generuoti atsitiktinai" << endl;
     cin >> pasirinkimas;
+    if(pasirinkimas != 1 || pasirinkimas != 2){
+        cout << "Tokio pasirinkimo nėra! Bandyk dar kartą" << endl;
+        int pasirinkimas1;
+        cin >> pasirinkimas1;
+        pasirinkimas = pasirinkimas1;
+    }
     if (pasirinkimas == 1){
         nuskaitymas("studentai1000000.txt", studentai);
     } 
@@ -41,10 +47,6 @@ int main(){
         cout << "Įveskite namų darbų skaičių:";
         cin >> ndKiekis;
         studentuGeneravimas(studentai, kiekis, ndKiekis);
-    }
-    else{
-        cout << "Tokio pasirinkimo nėra!" << endl;
-        return 0;
     }
     spausdinimas(studentai);
 }
