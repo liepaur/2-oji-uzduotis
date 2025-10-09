@@ -118,18 +118,20 @@ bool palyginimas(const Studentas& a, const Studentas& b){
 // Funkcija galutinio balo spausdinimui
 void spausdinimas(vector<Studentas>& studentai){
     sort(studentai.begin(), studentai.end(), palyginimas);
-    cout << fixed << setprecision(2);
-    cout << left << setw(15) << "Vardas"
+    ofstream out("rezultatai.txt");
+    out << fixed << setprecision(2);
+    out << left << setw(15) << "Vardas"
          << setw(15) << "Pavarde"
          << setw(10) << "Galutinis (Vid.)"
          << setw(10) << "Galutinis (Med.)"
          << endl;
-    cout << "------------------------------------------------------------" << endl;
-    for (const auto& s : studentai){
-        cout << left << setw(15) << s.vardas
+    out << "------------------------------------------------------------" << endl;
+    for (const Studentas& s : studentai){
+        out << left << setw(15) << s.vardas
              << setw(15) << s.pavarde
              << setw(10) << baloSkaiciavimas(s)
              << setw(10) << baloSkaiciavimasMediana(s)
              << endl;
     }
 }
+
