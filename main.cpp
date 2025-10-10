@@ -13,22 +13,24 @@ int main(){
     vector<Studentas> studentai, kietiakai, vargsiukai;
     Timer t;
     Timer visas;
-    int pasirinkimas;
-
+    int pasirinkimas = 0;
+    
     cout << "Pasirinkite duomenų šaltinį:" << endl
-         << "1 - Skaityti iš failo" << endl
-         << "2 - Generuoti atsitiktinai" << endl;
-    cin >> pasirinkimas;
+        << "1 - Skaityti iš failo" << endl
+        << "2 - Generuoti atsitiktinai" << endl;
+        cin >> pasirinkimas;
 
     if (pasirinkimas == 1){
+        int failoPasirinkimas;
         cout << "Pasirinkite failo dydį" << endl;
         cout << "1 - 1000 įrašų" << endl;
         cout << "2 - 10000 įrašų" << endl;
         cout << "3 - 100000 įrašų" << endl;
         cout << "4 - 1000000 įrašų" << endl;
         cout << "5 - 10000000 įrašų" << endl;
-        int failoPasirinkimas;
+        cout << flush;
         cin >> failoPasirinkimas;
+
         auto start = std::chrono::high_resolution_clock::now();
         if (failoPasirinkimas == 1)
             nuskaitymas("studentai1000.txt", studentai);
@@ -42,8 +44,10 @@ int main(){
             nuskaitymas("studentai10000000.txt", studentai);
         else{
             cout << "Tokio pasirinkimo nėra!" << endl;
+            return 0;
         }
         cout << studentai.size() << " Duomenų nuskaitymas užtruko: " << t.elapsed() << " s\n";
+
     }
 
     else if (pasirinkimas == 2){
@@ -53,8 +57,9 @@ int main(){
         cout << "Įveskite namų darbų skaičių: ";
         cin >> ndKiekis;
         studentuGeneravimas(studentai, kiekis, ndKiekis);
-    } 
-    else {
+    }
+
+    else{
         cout << "Tokio pasirinkimo nėra!" << endl;
         return 0;
     }
@@ -68,13 +73,11 @@ int main(){
     cout << "Kietiakų spausdinimas užtruko: " << t.elapsed() << " s\n";
     
     t.reset();
-    cout << "Vargsiųjų spausdinimas užtruko: ";
+    cout << "Vargsiukų spausdinimas užtruko: ";
     sugrupuotuSpausdinimas("vargsiukai.txt", vargsiukai);
 
     cout << "Duomenų įrašymas į failus užtruko: " << t.elapsed() << " s\n";
     
     spausdinimas(studentai);
-    return 0;
-
-    cout << studentai.size() << " Visas programos vykdymas užtruko: " << visas.elapsed() << " s\n";
+    cout << studentai.size() << " Duomenų visos programos vykdymas užtruko: " << visas.elapsed() << " s\n";
 }
