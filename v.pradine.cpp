@@ -31,7 +31,7 @@ int main(){
     cout << "1 - Skaityti iš failo" << endl;
     cout << "2 - Generuoti atsitiktinai" << endl;
     cin >> pasirinkimas;
-    if(pasirinkimas != 1 || pasirinkimas != 2){
+    if(pasirinkimas != 1 && pasirinkimas != 2){
         cout << "Tokio pasirinkimo nėra! Bandyk dar kartą" << endl;
         int pasirinkimas1;
         cin >> pasirinkimas1;
@@ -124,15 +124,15 @@ void spausdinimas(vector<Studentas>& studentai){
     out << fixed << setprecision(2);
     out << left << setw(15) << "Vardas"
          << setw(15) << "Pavarde"
-         << setw(10) << "Galutinis (Vid.)"
-         << setw(10) << "Galutinis (Med.)"
+         << setw(17) << "Galutinis (Vid.)"
+         << setw(17) << "Galutinis (Med.)"
          << endl;
     out << "------------------------------------------------------------" << endl;
     for (const Studentas& s : studentai){
         out << left << setw(15) << s.vardas
              << setw(15) << s.pavarde
-             << setw(10) << baloSkaiciavimas(s)
-             << setw(10) << baloSkaiciavimasMediana(s)
+             << setw(17) << baloSkaiciavimas(s)
+             << setw(17) << baloSkaiciavimasMediana(s)
              << endl;
     }
 }
