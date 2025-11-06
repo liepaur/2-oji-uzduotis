@@ -2,11 +2,12 @@
 Testavimas
 
 Testavimo sistemos parametrai:
-CPU: Apple M4
-RAM: 16GB
-HDD: SSD
 
-Naudojant List:
+1. CPU: Apple M4
+2. RAM: 16GB
+3. HDD: SSD
+
+1. Naudojant List:
 1000 Duomenų rūšiavimas užtruko: 0.00105775 s
 Kietiakų spausdinimas užtruko: 0.00314454 s
 Vargsiukų spausdinimas užtruko: 1.67e-07 s
