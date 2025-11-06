@@ -7,8 +7,7 @@ RAM: 16GB
 HDD: SSD
 
 Naudojant List:
-1000 Duomenų rūšiavimas užtruko: 0.00105775 s
-
+1000 Duomenų rūšiavimas užtruko: 0.00105775 s//
 Kietiakų spausdinimas užtruko: 0.00314454 s
 
 Vargsiukų spausdinimas užtruko: 1.67e-07 s
