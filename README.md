@@ -8,9 +8,13 @@ HDD: SSD
 
 Naudojant List:
 1000 Duomenų rūšiavimas užtruko: 0.00105775 s
+
 Kietiakų spausdinimas užtruko: 0.00314454 s
+
 Vargsiukų spausdinimas užtruko: 1.67e-07 s
+
 Duomenų įrašymas į failus užtruko: 0.00219242 s
+
 1000 Duomenų visos programos vykdymas užtruko: 4.37981 s
 
 10000 Duomenų rūšiavimas užtruko: 0.00904271 s
