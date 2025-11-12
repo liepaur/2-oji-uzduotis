@@ -2,18 +2,22 @@
 #define STUDENTAS_H
 
 #include <string>
-#include <vector>
+#include <list>
+#include <numeric>   
+#include <algorithm> 
 using namespace std;
 
 struct Studentas{
     string vardas;
     string pavarde;
-    vector<int> nd;
+    list<int> nd;
     int egz;
+    double galutinis;
 };
 
 double baloSkaiciavimas(const Studentas& s);
 double baloSkaiciavimasMediana(const Studentas& s);
-bool palyginimas(const Studentas& a, const Studentas& b);
-
+bool palyginimasVardas(const Studentas &a, const Studentas &b);
+bool palyginimasPavarde(const Studentas &a, const Studentas &b);
+bool palyginimasGalutinis(const Studentas &a, const Studentas &b);
 #endif

@@ -9,21 +9,20 @@
 
 using namespace std;
 
-void nuskaitymas(const string& failoVardas, vector<Studentas>& studentai){
+void nuskaitymas(const string& failoVardas, list<Studentas>& studentai){
     ifstream in(failoVardas);
     if (!in.is_open()) {
         cout << "Nepavyko atidaryti failo: " << failoVardas << endl;
         return;
     }
-
+    Studentas st;
     string eilute;
-    getline(in, eilute); // skip header
+    getline(in, eilute);
 
     while (getline(in, eilute)) {
         stringstream ss(eilute);
-        Studentas st;
         ss >> st.vardas >> st.pavarde;
-        vector<int> laikini;
+        list<int> laikini;
         int paz;
         while (ss >> paz) laikini.push_back(paz);
 
@@ -38,9 +37,9 @@ void nuskaitymas(const string& failoVardas, vector<Studentas>& studentai){
     in.close();
 }
 
-void studentuGeneravimas(vector<Studentas>& studentai, int kiekis, int ndKiekis){
+void studentuGeneravimas(list<Studentas>& studentai, int kiekis, int ndKiekis){
+    Studentas st;
     for (int i = 0; i < kiekis; i++) {
-        Studentas st;
         st.vardas = "Vardas" + to_string(i + 1);
         st.pavarde = "Pavarde" + to_string(i + 1);
 
@@ -52,20 +51,48 @@ void studentuGeneravimas(vector<Studentas>& studentai, int kiekis, int ndKiekis)
     }
 }
 
-void spausdinimas(vector<Studentas>& studentai){
-    sort(studentai.begin(), studentai.end(), palyginimas);
-
-    cout << fixed << setprecision(2);
-    cout << left << setw(15) << "Vardas"
-         << setw(15) << "Pavarde"
-         << setw(15) << "Galutinis (Vid.)"
-         << setw(15) << "Galutinis (Med.)" << endl;
-    cout << string(60, '-') << endl;
+void spausdinimas(list<Studentas>& studentai){
+    ofstream out("rezultatai.txt");
+    out << fixed << setprecision(2);
+    out << left << setw(20) << "Vardas"
+         << setw(20) << "Pavarde"
+         << setw(20) << "Galutinis (Vid.)"
+         << setw(20) << "Galutinis (Med.)" << endl;
+    out << string(60, '-') << endl;
 
     for (const Studentas& s : studentai){
-        cout << left << setw(15) << s.vardas
-             << setw(15) << s.pavarde
-             << setw(15) << baloSkaiciavimas(s)
-             << setw(15) << baloSkaiciavimasMediana(s) << endl;
+        out << left << setw(20) << s.vardas
+             << setw(20) << s.pavarde
+             << setw(20) << s.galutinis << endl;
     }
 }
+
+void grupavimas(list<Studentas>& studentai, list<Studentas>& kietiakai, list<Studentas>& vargsiukai){
+    for (const Studentas& s : studentai){
+        if (baloSkaiciavimas(s) >= 5.0){
+            kietiakai.push_back(s);
+        }
+        else{
+            vargsiukai.push_back(s);
+        }
+    }
+}
+
+void sugrupuotuSpausdinimas(const string& failoVardas, list<Studentas>& studentai){
+    ofstream out(failoVardas);
+    out << fixed << setprecision(2);
+    out << left << setw(20) << "Vardas"
+        << setw(20) << "Pavarde"
+        << setw(20) << "Galutinis (Vid.)"
+        << setw(20) << "Galutinis (Med.)"
+        << endl;
+    out << "-----------------------------------------------------------------------" << endl;
+    for (const Studentas& s : studentai){
+        out << left << setw(20) << s.vardas
+            << setw(20) << s.pavarde
+            << setw(20) << s.galutinis
+            << endl;
+    }
+    out.close();
+}
+

@@ -5,12 +5,13 @@
 #include <ctime>
 #include <chrono>
 #include "Timer.h"
+#include "studentas.h"
 
 using namespace std;
 
 int main(){
     srand(time(0));
-    vector<Studentas> studentai, kietiakai, vargsiukai;
+    list<Studentas> studentai, kietiakai, vargsiukai, galutinis;
     Timer t;
     Timer visas;
     int pasirinkimas = 0;
@@ -64,16 +65,53 @@ int main(){
         return 0;
     }
 
+    cout << "Pasirinkite galutinio balo skaičiavimo būdą:" << endl
+        << "1 - Vidurkis" << endl
+        << "2 - Mediana" << endl;
+    int GalutinioPasirinkimas;
+    cin >> GalutinioPasirinkimas;
+    if(GalutinioPasirinkimas !=1 && GalutinioPasirinkimas !=2){
+        cout << "Tokio pasirinkimo nėra!" << endl;
+        return 0;
+    }
+    else if(GalutinioPasirinkimas == 1){
+        for(auto& s : studentai){
+            s.galutinis = baloSkaiciavimas(s);
+        }
+    }
+    else if(GalutinioPasirinkimas == 2){
+        for(auto& s : studentai){
+            s.galutinis = baloSkaiciavimasMediana(s);
+        }
+    }
+
+    cout << "Pasirinkite duomenų rūšiavimo būdą:" << endl
+        << "1 - Pagal vardą" << endl
+        << "2 - Pagal pavardę" << endl
+        << "3 - Pagal galutinį balą" << endl;
+    int RusiavimoPasirinkimas;
+    cin >> RusiavimoPasirinkimas;
+    if(RusiavimoPasirinkimas !=1 && RusiavimoPasirinkimas !=2 && RusiavimoPasirinkimas !=3){
+        cout << "Tokio pasirinkimo nėra!" << endl;
+        return 0;
+    }
+    else if(RusiavimoPasirinkimas == 1)
+        studentai.sort(palyginimasVardas);
+    else if(RusiavimoPasirinkimas == 2)
+        studentai.sort(palyginimasPavarde);
+    else if(RusiavimoPasirinkimas == 3)
+        studentai.sort(palyginimasGalutinis);
+
     t.reset();
     grupavimas(studentai, kietiakai, vargsiukai);
     cout << studentai.size() << " Duomenų rūšiavimas užtruko: " << t.elapsed() << " s\n";
     
     t.reset();
-    sugrupuotuSpausdinimas("kietiakai.txt", kietiakai);
+    sugrupuotuSpausdinimas("kietiahkai.txt", kietiakai);
     cout << "Kietiakų spausdinimas užtruko: " << t.elapsed() << " s\n";
     
     t.reset();
-    cout << "Vargsiukų spausdinimas užtruko: ";
+    cout << "Vargsiukų spausdinimas užtruko: " << t.elapsed() << " s\n";
     sugrupuotuSpausdinimas("vargsiukai.txt", vargsiukai);
 
     cout << "Duomenų įrašymas į failus užtruko: " << t.elapsed() << " s\n";
