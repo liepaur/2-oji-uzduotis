@@ -1,5 +1,6 @@
 #include "studentas.h"
 #include <algorithm>
+#include <iterator>
 
 double baloSkaiciavimas(const Studentas& s) {
     double suma = 0;
@@ -9,17 +10,35 @@ double baloSkaiciavimas(const Studentas& s) {
 }
 
 double baloSkaiciavimasMediana(const Studentas& s) {
-    vector<int> kopija = s.nd;
-    sort(kopija.begin(), kopija.end());
-    double mediana;
+    if (s.nd.empty()) return 0.0;
+    list<int> kopija = s.nd;
+    kopija.sort();
     size_t n = kopija.size();
-    if (n % 2 == 0)
-        mediana = (kopija[n/2 - 1] + kopija[n/2]) / 2.0;
-    else
-        mediana = kopija[n/2];
+    auto it = kopija.begin();
+    
+    double mediana;
+    if (n % 2 == 0) {
+        advance(it, n / 2 - 1);
+        double first = *it;
+        advance(it, 1);
+        double second = *it;
+        mediana = (first + second) / 2.0;
+    }
+    else {
+        advance(it, n / 2);
+        mediana = *it;
+    }
     return 0.4 * mediana + 0.6 * s.egz;
 }
 
-bool palyginimas(const Studentas& a, const Studentas& b) {
+bool palyginimasVardas(const Studentas &a, const Studentas &b) {
     return a.vardas < b.vardas;
+}
+
+bool palyginimasPavarde(const Studentas &a, const Studentas &b) {
+    return a.pavarde < b.pavarde;
+}
+
+bool palyginimasGalutinis(const Studentas &a, const Studentas &b) {
+    return a.galutinis < b.galutinis;
 }
