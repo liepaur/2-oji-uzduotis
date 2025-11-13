@@ -7,92 +7,78 @@
 #include <algorithm>
 #include <cstdlib>
 
-using namespace std;
-
-void nuskaitymas(const string& failoVardas, list<Studentas>& studentai){
-    ifstream in(failoVardas);
+void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai){
+    std::ifstream in(failoVardas);
     if (!in.is_open()) {
-        cout << "Nepavyko atidaryti failo: " << failoVardas << endl;
+        std::cout << "Nepavyko atidaryti failo: " << failoVardas << std::endl;
         return;
     }
-    Studentas st;
-    string eilute;
+
+    std::string eilute;
     getline(in, eilute);
 
     while (getline(in, eilute)) {
-        stringstream ss(eilute);
-        ss >> st.vardas >> st.pavarde;
-        list<int> laikini;
-        int paz;
-        while (ss >> paz) laikini.push_back(paz);
-
-        if (!laikini.empty()) {
-            st.egz = laikini.back();
-            laikini.pop_back();
-            st.nd = laikini;
-        }
+        std::stringstream ss(eilute);
+        Studentas st;
+        st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
     }
 
     in.close();
 }
 
-void studentuGeneravimas(list<Studentas>& studentai, int kiekis, int ndKiekis){
-    Studentas st;
-    for (int i = 0; i < kiekis; i++) {
-        st.vardas = "Vardas" + to_string(i + 1);
-        st.pavarde = "Pavarde" + to_string(i + 1);
+void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndKiekis){
+    for (int i = 0; i < kiekis; ++i){
+        std::stringstream ss;
+        ss << "Vardas" << i+1 << " Pavarde" << i+1;
+        for(int j=0; j < ndKiekis; ++j){
+            ss << rand() % 10 + 1 << " ";
+        }
+        ss << rand() % 10 + 1;
 
-        for (int j = 0; j < ndKiekis; j++)
-            st.nd.push_back(rand() % 10 + 1);
-
-        st.egz = rand() % 10 + 1;
+        Studentas st(ss);
+        st.apskaiciuotiGalutini();
         studentai.push_back(st);
     }
 }
 
-void spausdinimas(list<Studentas>& studentai){
-    ofstream out("rezultatai.txt");
+void spausdinimas(std::vector<Studentas>& studentai){
+    std::ofstream out("rezultatai.txt");
     out << fixed << setprecision(2);
-    out << left << setw(20) << "Vardas"
-         << setw(20) << "Pavarde"
-         << setw(20) << "Galutinis (Vid.)"
-         << setw(20) << "Galutinis (Med.)" << endl;
-    out << string(60, '-') << endl;
+    out << std::left << setw(20) << "Vardas"
+         << std::setw(20) << "Pavarde"
+         << std::setw(20) << "Galutinis (Vid.)"
+         << std::setw(20) << "Galutinis (Med.)" << endl;
+    out << std::string(60, '-') << endl;
 
-    for (const Studentas& s : studentai){
-        out << left << setw(20) << s.vardas
-             << setw(20) << s.pavarde
-             << setw(20) << s.galutinis << endl;
+    for(const auto& s: studentai)
+    {
+        s.spausdinti(out)
     }
 }
 
-void grupavimas(list<Studentas>& studentai, list<Studentas>& kietiakai, list<Studentas>& vargsiukai){
-    for (const Studentas& s : studentai){
-        if (baloSkaiciavimas(s) >= 5.0){
+void grupavimas(std::vector<Studentas>& studentai, std::vector<Studentas>& kietiakai, std::vector<Studentas>& vargsiukai){
+    for(const auto& s : studentai){
+        if(s.galutinis() >= 5.0){
             kietiakai.push_back(s);
-        }
-        else{
+        } 
+        else {
             vargsiukai.push_back(s);
         }
-    }
 }
 
-void sugrupuotuSpausdinimas(const string& failoVardas, list<Studentas>& studentai){
-    ofstream out(failoVardas);
+
+void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studentas>& studentai){
+    std::ofstream out(failoVardas);
     out << fixed << setprecision(2);
-    out << left << setw(20) << "Vardas"
-        << setw(20) << "Pavarde"
-        << setw(20) << "Galutinis (Vid.)"
-        << setw(20) << "Galutinis (Med.)"
+    out << std::left << setw(20) << "Vardas"
+        << std::setw(20) << "Pavarde"
+        << std::setw(20) << "Galutinis (Vid.)"
+        << std::setw(20) << "Galutinis (Med.)"
         << endl;
     out << "-----------------------------------------------------------------------" << endl;
-    for (const Studentas& s : studentai){
-        out << left << setw(20) << s.vardas
-            << setw(20) << s.pavarde
-            << setw(20) << s.galutinis
-            << endl;
+    for (const auto& s : studentai){
+        s.spausdinti(out);
     }
-    out.close();
 }
 
