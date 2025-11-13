@@ -46,7 +46,7 @@ void Studentas::apskaiciuotiGalutini(bool naudotiMediana) {
     galutinis_ = 0.4 * nd_rezultatas + 0.6 * egz_;
 }
 
-void Studentas::spausdinimas(std::ostream& os) const {
+void Studentas::spausdinti(std::ostream& os) const {
     os << std::left << std::setw(15) << vardas_
        << std::left << std::setw(15) << pavarde_
        << std::right << std::setw(5) << std::fixed << std::setprecision(2) << galutinis_;

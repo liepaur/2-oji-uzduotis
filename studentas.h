@@ -35,7 +35,7 @@ public:
     double skaiciuotiMediana() const;
     void apskaiciuotiGalutini(bool naudotiMediana = false);
 
-    void spausdinimas(std::ostream& os) const;
+    void spausdinti(std::ostream& os) const;
 };
 
 bool palyginimasVardas(const Studentas &a, const Studentas &b);
