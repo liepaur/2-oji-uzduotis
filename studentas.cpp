@@ -36,6 +36,10 @@ Studentas& Studentas::operator=(const Studentas &other) {
 
 Studentas::~Studentas() {}
 
+Studentas::Studentas(std::istream& is) {
+    nuskaitymas(is);
+}
+
 std::istream& Studentas::nuskaitymas(std::istream& is) {
     is >> vardas_ >> pavarde_;
     int paz;
