@@ -57,12 +57,7 @@ std::istream& Studentas::nuskaitymas(std::istream& is) {
         nd_.push_back(paz);
     }
 
-    if(!nd_.empty()) {
-        egz_ = nd_.back();
-        nd_.pop_back();
-    } else {
-        egz_ = 0;
-    }
+    is >> egz_;
     return is;
 }
 
