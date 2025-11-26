@@ -68,6 +68,7 @@ void grupavimas(std::vector<Studentas>& studentai, std::vector<Studentas>& kieti
             vargsiukai.push_back(s);
         }
 }
+}
 
 
 void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studentas>& studentai){
@@ -77,7 +78,7 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
         << std::setw(20) << "Pavarde"
         << std::setw(20) << "Galutinis (Vid.)"
         << std::setw(20) << "Galutinis (Med.)"
-        << endl;
+        << std::endl;
     out << "-----------------------------------------------------------------------" << endl;
     for (const auto& s : studentai){
         s.spausdinti(out);
