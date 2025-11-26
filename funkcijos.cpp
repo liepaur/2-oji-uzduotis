@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <algorithm>
 #include <cstdlib>
+#include <iomanip>
 
 void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai){
     std::ifstream in(failoVardas);
@@ -19,7 +20,7 @@ void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& student
 
     while (getline(in, eilute)) {
         std::stringstream ss(eilute);
-        Studentas st;
+        Studentas st(ss);
         st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
     }
@@ -37,14 +38,14 @@ void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndK
         ss << rand() % 10 + 1;
 
         Studentas st(ss);
-        st.apskaiciuotiGalutini();
+        st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
     }
 }
 
 void spausdinimas(std::vector<Studentas>& studentai){
     std::ofstream out("rezultatai.txt");
-    out << fixed << setprecision(2);
+    out << std::fixed << setprecision(2);
     out << std::left << setw(20) << "Vardas"
          << std::setw(20) << "Pavarde"
          << std::setw(20) << "Galutinis (Vid.)"
@@ -53,7 +54,8 @@ void spausdinimas(std::vector<Studentas>& studentai){
 
     for(const auto& s: studentai)
     {
-        s.spausdinti(out)
+        s.spausdinti(out);
+        out << std::endl;
     }
 }
 
@@ -81,4 +83,3 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
         s.spausdinti(out);
     }
 }
-
