@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <chrono>
+#include <algorithm>
 
 int main() {
     srand(time(0));

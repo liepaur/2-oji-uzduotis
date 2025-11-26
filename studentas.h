@@ -8,20 +8,23 @@
 #include <algorithm>
 #include <iomanip>
 #include <sstream>
+#include "zmogus.h"
 
 double mediana(std::vector<int> v);
 
-class Studentas {
+class Studentas : public Zmogus {
 private:
-    std::string vardas_;
-    std::string pavarde_;
     std::vector<int> nd_;
     int egz_;
     double galutinis_;
 
 public:
-    Studentas() : egz_(0), galutinis_(0.0) {}
-    Studentas(std::istream& is) { nuskaitymas(is); }
+    Studentas();
+    Studentas(std::istream& is);
+    
+    Studentas(const Studentas& other);
+    Studentas& operator=(const Studentas& other);
+    ~Studentas();
 
     inline std::string vardas() const { return vardas_; }
     inline std::string pavarde() const { return pavarde_; }
@@ -30,13 +33,14 @@ public:
     inline int egz() const { return egz_; }
 
     std::istream& nuskaitymas(std::istream& is);
-
     double skaiciuotiVidurki() const;
     double skaiciuotiMediana() const;
-    void apskaiciuotiGalutini(bool naudotiMediana = false);
-
-    void spausdinti(std::ostream& os) const;
+    void apskaiciuotiGalutini(bool naudotiMediana);
+    void spausdinti(std::ostream& os) const override;
 };
+
+std::istream& operator>>(std::istream& is, Studentas& st);
+std::ostream& operator<<(std::ostream& os, const Studentas& st);
 
 bool palyginimasVardas(const Studentas &a, const Studentas &b);
 bool palyginimasPavarde(const Studentas &a, const Studentas &b);

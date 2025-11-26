@@ -14,6 +14,41 @@ double mediana(std::vector<int> v) {
     }
 }
 
+Studentas::Studentas() : egz_(0), galutinis_(0.0) {}
+
+Studentas::Studentas(const Studentas &other)
+    : vardas_(other.vardas_), 
+    pavarde_(other.pavarde_),
+    nd_(other.nd_), 
+    egz_(other.egz_), 
+    galutinis_(other.galutinis_) {}
+
+Studentas& Studentas::operator=(const Studentas &other) {
+    if (this != &other) {
+        vardas_ = other.vardas_;
+        pavarde_ = other.pavarde_;
+        nd_ = other.nd_;
+        egz_ = other.egz_;
+        galutinis_ = other.galutinis_;
+    }
+    return *this;
+}
+
+Studentas::~Studentas() {}
+
+Studentas::Studentas(std::istream& is) {
+    nuskaitymas(is);
+}
+
+std::istream& operator>>(std::istream& is, Studentas& st) {
+    return st.nuskaitymas(is);
+}
+
+std::ostream& operator<<(std::ostream& os, const Studentas& st) {
+    st.spausdinti(os);
+    return os;
+}
+
 std::istream& Studentas::nuskaitymas(std::istream& is) {
     is >> vardas_ >> pavarde_;
     int paz;
@@ -22,12 +57,7 @@ std::istream& Studentas::nuskaitymas(std::istream& is) {
         nd_.push_back(paz);
     }
 
-    if(!nd_.empty()) {
-        egz_ = nd_.back();
-        nd_.pop_back();
-    } else {
-        egz_ = 0;
-    }
+    is >> egz_;
     return is;
 }
 
