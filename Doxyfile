@@ -1,4 +1,4 @@
-PROJECT_NAME           = "StudentuProjektas"
+PROJECT_NAME           = "StudentųProjektas"
 PROJECT_BRIEF          = "Dokumentacija generuota su Doxygen"
 OUTPUT_DIRECTORY       = docs_output
 
@@ -10,6 +10,7 @@ INPUT                  = main.cpp \
                          Timer.h \
                          funkcijos.h \
                          zmogus.h \ 
+                         
 
 INPUT += studentai1000.txt \
          studentai10000.txt \
