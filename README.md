@@ -9,7 +9,7 @@ Testavimo sistemos parametrai:
 
 3 strategijos spartos analizė su vektoriais lyginant struct ir class:
  | Failo dydis | *struct* | *class* |
-  |:---|:-------------:|:-------------:|:-------------:|
+  |:---|:-------------:|:-------------:|
   | *1000*     | 0.0007 s | 0.0001 s |
   | *10000*    | 0.0058 s | 0.0004 s |
   | *100000*   | 0.2722 s | 0.0443 s | 
