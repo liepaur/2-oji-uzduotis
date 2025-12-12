@@ -17,6 +17,9 @@ Testavimo sistemos parametrai:
   | *10000000* | 3.2691 s | 0.4789 s |
 
 Flag analizė
-  01: Vector strategija 3: 0.2982 s
-  02: Vector strategija 3: 0.3025 s
-  03: Vector strategija 3: 0.2887 s
+
+| Failo dydis | *1000000* | *10000000* |
+  |:---|:-------------:|:-------------:|
+  | *01*  | 0.0101 s | 0.3008 s | 
+  | *02* | 0.0147 s | 0.2750 s |
+  | *03* | 0.0225 s s | 0.3221 s |
