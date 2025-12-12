@@ -1,0 +1,38 @@
+PROJECT_NAME           = "StudentųProjektas"
+PROJECT_BRIEF          = "Dokumentacija generuota su Doxygen"
+OUTPUT_DIRECTORY       = docs_output
+
+INPUT                  = main.cpp \
+                         failu.generavimas.cpp \
+                         funkcijos.cpp \
+                         studentas.cpp \
+                         studentas.h \
+                         Timer.h \
+                         funkcijos.h \
+                         zmogus.h \ 
+                         
+
+INPUT += studentai1000.txt \
+         studentai10000.txt \
+         studentai100000.txt \
+         studentai1000000.txt \
+         studentai10000000.txt \
+         rezultatai.txt \
+         kietiakai.txt \
+         vargsiukai.txt
+
+FILE_PATTERNS        = *.cpp  *.h *.txt
+RECURSIVE             = NO
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = doxygen_html
+GENERATE_LATEX         = NO
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+FULL_PATH_NAMES        = NO
+QUIET                  = NO
+WARNINGS               = YES
