@@ -36,6 +36,10 @@ public:
     double skaiciuotiMediana() const;
     void apskaiciuotiGalutini(bool naudotiMediana);
     void spausdinti(std::ostream& os) const override;
+    void setVardas(const std::string& v) { vardas_ = v; }
+    void setPavarde(const std::string& p) { pavarde_ = p; }
+    void setND(const std::vector<int>& nd) { nd_ = nd; }
+    void setEgz(int e) { egz_ = e; }
 };
 
 

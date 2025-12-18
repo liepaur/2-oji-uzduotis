@@ -6,7 +6,6 @@
 #include <cstdlib>
 #include <ctime>
 #include <chrono>
-#include <algorithm>
 
 int main() {
     srand(time(0));
@@ -16,7 +15,8 @@ int main() {
     int pasirinkimas = 0;
     std::cout << "Pasirinkite duomenų šaltinį:\n"
               << "1 - Skaityti iš failo\n"
-              << "2 - Generuoti atsitiktinai\n";
+              << "2 - Generuoti atsitiktinai\n"
+              << "3 - Įvesti rankiniu būdų\n";
     std::cin >> pasirinkimas;
 
     if (pasirinkimas == 1) {
@@ -57,6 +57,50 @@ int main() {
         std::cin >> ndKiekis;
         studentuGeneravimas(studentai, kiekis, ndKiekis);
     }
+    else if (pasirinkimas == 3) {
+    int kiekis;
+    std::cout << "Įveskite studentų skaičių: ";
+    std::cin >> kiekis;
+
+    for (int i = 0; i < kiekis; i++) {
+        Studentas s;
+
+        std::cout << "\nĮveskite " << i + 1 << " studento duomenis:\n";
+
+        std::string vardas;
+        std::cout << "Vardas: ";
+        std::cin >> vardas;
+        s.setVardas(vardas);
+
+        std::string pavarde;
+        std::cout << "Pavardė: ";
+        std::cin >> pavarde;
+        s.setPavarde(pavarde);
+
+        int ndKiekis;
+        std::cout << "Įveskite namų darbų skaičių: ";
+        std::cin >> ndKiekis;
+
+        std::vector<int> nd(ndKiekis);
+        for (int j = 0; j < ndKiekis; j++) {
+            std::cout << "ND " << j + 1 << ": ";
+            std::cin >> nd[j];
+        }
+        s.setND(nd);
+
+        int egz;
+        std::cout << "Egzamino balas: ";
+        std::cin >> egz;
+        s.setEgz(egz);
+
+        studentai.push_back(s);
+
+        auto it = studentai.end();
+        --it;
+        std::cout << "Objekto adresas atmintyje: " << &(*it) << std::endl;
+    }
+}
+
     else {
         std::cout << "Tokio pasirinkimo nėra!\n";
         return 0;
@@ -69,8 +113,7 @@ int main() {
     std::cin >> GalutinioPasirinkimas;
 
     for (auto& s : studentai)
-        s.apskaiciuotiGalutini(GalutinioPasirinkimas == 2); // true = mediana, false = vidurkis
-
+        s.apskaiciuotiGalutini(GalutinioPasirinkimas == 2);
     int RusiavimoPasirinkimas;
     std::cout << "Pasirinkite duomenų rūšiavimo būdą:\n"
               << "1 - Pagal vardą\n"
@@ -89,10 +132,19 @@ int main() {
         return 0;
     }
 
+    std::cout << "Pasirinkite išvesties būdą:\n"
+              << "1 - Į failą\n"
+              << "2 - Paprastas išvedimas\n";
+
+    int isvestiesBudas;
+    std::cin >> isvestiesBudas;
+
+
     Timer t;
     grupavimas(studentai, kietiakai, vargsiukai);
     std::cout << studentai.size() << " studentų rūšiavimas užtruko: " << t.elapsed() << " s.\n";
 
+    if( isvestiesBudas == 1 ) {
     t.reset();
     sugrupuotuSpausdinimas("kietiakai.txt", kietiakai);
     std::cout << "Kietiakų spausdinimas užtruko: " << t.elapsed() << " s.\n";
@@ -104,6 +156,16 @@ int main() {
     t.reset();
     spausdinimas(studentai);
     std::cout << studentai.size() << " studentų rezultatų išvedimas užtruko: " << t.elapsed() << " s.\n";
+    }
+    else if( isvestiesBudas == 2 ) {
+        t.reset();
+        spausdinimasEkrane(studentai);
+        std::cout << studentai.size() << " studentų rezultatų išvedimas užtruko: " << t.elapsed() << " s.\n";
+    }
+    else {
+        std::cout << "Tokio pasirinkimo nėra!\n";
+        return 0;
+    }
 
     std::cout << "Visa programa užtruko: " << visas.elapsed() << " s.\n";
 }

@@ -1,6 +1,6 @@
 Vardas              Pavarde             Galutinis (Vid.)    Galutinis (Med.)    
 ------------------------------------------------------------
-Vardas1        Pavarde1       24728066.48
+Vardas1        Pavarde1       5005212.08
 Vardas10       Pavarde10       3.40
 Vardas100      Pavarde100      4.90
 Vardas1000     Pavarde1000     2.20

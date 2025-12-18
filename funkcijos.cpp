@@ -6,7 +6,6 @@
 #include <iomanip>
 #include <algorithm>
 #include <cstdlib>
-#include <iomanip>
 
 void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai){
     std::ifstream in(failoVardas);
@@ -20,7 +19,7 @@ void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& student
 
     while (getline(in, eilute)) {
         std::stringstream ss(eilute);
-        Studentas st(ss);
+        Studentas st;
         st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
     }
@@ -45,7 +44,7 @@ void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndK
 
 void spausdinimas(std::vector<Studentas>& studentai){
     std::ofstream out("rezultatai.txt");
-    out << std::fixed << setprecision(2);
+    out << fixed << setprecision(2);
     out << std::left << setw(20) << "Vardas"
          << std::setw(20) << "Pavarde"
          << std::setw(20) << "Galutinis (Vid.)"
@@ -55,7 +54,6 @@ void spausdinimas(std::vector<Studentas>& studentai){
     for(const auto& s: studentai)
     {
         s.spausdinti(out);
-        out << std::endl;
     }
 }
 
@@ -78,9 +76,23 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
         << std::setw(20) << "Pavarde"
         << std::setw(20) << "Galutinis (Vid.)"
         << std::setw(20) << "Galutinis (Med.)"
-        << std::endl;
+        << endl;
     out << "-----------------------------------------------------------------------" << endl;
     for (const auto& s : studentai){
         s.spausdinti(out);
+    }
+}
+
+
+void spausdinimasEkrane(std::vector<Studentas>& studentai){
+    std:: cout << fixed << setprecision(2);
+    std:: cout << std::left << setw(20) << "Vardas"
+         << std::setw(20) << "Pavarde"
+         << std::setw(20) << "Galutinis" << endl;
+    std::cout << std::string(60, '-') << endl;
+
+    for(const auto& s: studentai)
+    {
+        s.spausdinti(std::cout);
     }
 }
