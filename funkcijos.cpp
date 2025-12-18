@@ -37,7 +37,7 @@ void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndK
         ss << rand() % 10 + 1;
 
         Studentas st(ss);
-        st.apskaiciuotiGalutini();
+        st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
     }
 }
@@ -53,7 +53,7 @@ void spausdinimas(std::vector<Studentas>& studentai){
 
     for(const auto& s: studentai)
     {
-        s.spausdinti(out)
+        s.spausdinti(out);
     }
 }
 
@@ -65,6 +65,7 @@ void grupavimas(std::vector<Studentas>& studentai, std::vector<Studentas>& kieti
         else {
             vargsiukai.push_back(s);
         }
+}
 }
 
 
@@ -82,3 +83,17 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
     }
 }
 
+
+void spausdinimasEkrane(std::vector<Studentas>& studentai){
+    std:: cout << fixed << setprecision(2);
+    std:: cout << std::left << setw(20) << "Vardas"
+         << std::setw(20) << "Pavarde"
+         << std::setw(20) << "Galutinis (Vid.)"
+         << std::setw(20) << "Galutinis (Med.)" << endl;
+    std::cout << std::string(60, '-') << endl;
+
+    for(const auto& s: studentai)
+    {
+        s.spausdinti(std::cout);
+    }
+}
