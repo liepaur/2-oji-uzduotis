@@ -21,7 +21,6 @@ void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& student
         std::stringstream ss(eilute);
         Studentas st;
         st.apskaiciuotiGalutini(false);
-        st.apskaiciuotiGalutini(true);
         studentai.push_back(st);
     }
 
@@ -38,9 +37,7 @@ void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndK
         ss << rand() % 10 + 1;
 
         Studentas st(ss);
-        st.apskaiciuotiGalutini(false); 
-        st.apskaiciuotiGalutini(true);
-
+        st.apskaiciuotiGalutini();
         studentai.push_back(st);
     }
 }
@@ -71,6 +68,7 @@ void grupavimas(std::vector<Studentas>& studentai, std::vector<Studentas>& kieti
 }
 }
 
+
 void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studentas>& studentai){
     std::ofstream out(failoVardas);
     out << fixed << setprecision(2);
@@ -84,4 +82,3 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
         s.spausdinti(out);
     }
 }
-
