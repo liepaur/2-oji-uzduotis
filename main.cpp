@@ -1,5 +1,9 @@
 #include "funkcijos.h"
+<<<<<<< HEAD
 #include "studentas.h"
+=======
+#include "Studentas.h"
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
 #include "Timer.h"
 #include <iostream>
 #include <vector>
@@ -15,8 +19,12 @@ int main() {
     int pasirinkimas = 0;
     std::cout << "Pasirinkite duomenų šaltinį:\n"
               << "1 - Skaityti iš failo\n"
+<<<<<<< HEAD
               << "2 - Generuoti atsitiktinai\n"
               << "3 - Įvesti rankiniu būdų\n";
+=======
+              << "2 - Generuoti atsitiktinai\n";
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     std::cin >> pasirinkimas;
 
     if (pasirinkimas == 1) {
@@ -57,6 +65,7 @@ int main() {
         std::cin >> ndKiekis;
         studentuGeneravimas(studentai, kiekis, ndKiekis);
     }
+<<<<<<< HEAD
     else if (pasirinkimas == 3) {
     int kiekis;
     std::cout << "Įveskite studentų skaičių: ";
@@ -101,6 +110,8 @@ int main() {
     }
 }
 
+=======
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     else {
         std::cout << "Tokio pasirinkimo nėra!\n";
         return 0;
@@ -113,7 +124,12 @@ int main() {
     std::cin >> GalutinioPasirinkimas;
 
     for (auto& s : studentai)
+<<<<<<< HEAD
         s.apskaiciuotiGalutini(GalutinioPasirinkimas == 2);
+=======
+        s.apskaiciuotiGalutini(GalutinioPasirinkimas == 2); // true = mediana, false = vidurkis
+
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     int RusiavimoPasirinkimas;
     std::cout << "Pasirinkite duomenų rūšiavimo būdą:\n"
               << "1 - Pagal vardą\n"
@@ -132,6 +148,7 @@ int main() {
         return 0;
     }
 
+<<<<<<< HEAD
     std::cout << "Pasirinkite išvesties būdą:\n"
               << "1 - Į failą\n"
               << "2 - Paprastas išvedimas\n";
@@ -140,11 +157,16 @@ int main() {
     std::cin >> isvestiesBudas;
 
 
+=======
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     Timer t;
     grupavimas(studentai, kietiakai, vargsiukai);
     std::cout << studentai.size() << " studentų rūšiavimas užtruko: " << t.elapsed() << " s.\n";
 
+<<<<<<< HEAD
     if( isvestiesBudas == 1 ) {
+=======
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     t.reset();
     sugrupuotuSpausdinimas("kietiakai.txt", kietiakai);
     std::cout << "Kietiakų spausdinimas užtruko: " << t.elapsed() << " s.\n";
@@ -156,6 +178,7 @@ int main() {
     t.reset();
     spausdinimas(studentai);
     std::cout << studentai.size() << " studentų rezultatų išvedimas užtruko: " << t.elapsed() << " s.\n";
+<<<<<<< HEAD
     }
     else if( isvestiesBudas == 2 ) {
         t.reset();
@@ -166,6 +189,8 @@ int main() {
         std::cout << "Tokio pasirinkimo nėra!\n";
         return 0;
     }
+=======
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
 
     std::cout << "Visa programa užtruko: " << visas.elapsed() << " s.\n";
 }

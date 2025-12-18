@@ -37,7 +37,11 @@ void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndK
         ss << rand() % 10 + 1;
 
         Studentas st(ss);
+<<<<<<< HEAD
         st.apskaiciuotiGalutini(false);
+=======
+        st.apskaiciuotiGalutini();
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
         studentai.push_back(st);
     }
 }
@@ -53,7 +57,11 @@ void spausdinimas(std::vector<Studentas>& studentai){
 
     for(const auto& s: studentai)
     {
+<<<<<<< HEAD
         s.spausdinti(out);
+=======
+        s.spausdinti(out)
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     }
 }
 
@@ -66,7 +74,10 @@ void grupavimas(std::vector<Studentas>& studentai, std::vector<Studentas>& kieti
             vargsiukai.push_back(s);
         }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
 
 
 void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studentas>& studentai){
@@ -83,6 +94,7 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
     }
 }
 
+<<<<<<< HEAD
 
 void spausdinimasEkrane(std::vector<Studentas>& studentai){
     std:: cout << fixed << setprecision(2);
@@ -97,3 +109,5 @@ void spausdinimasEkrane(std::vector<Studentas>& studentai){
         s.spausdinti(std::cout);
     }
 }
+=======
+>>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
