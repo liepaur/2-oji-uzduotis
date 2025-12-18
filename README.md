@@ -1,4 +1,3 @@
-# 1-oji-uzduotis
 Testavimas
 
 Testavimo sistemos parametrai:
@@ -7,69 +6,28 @@ Testavimo sistemos parametrai:
 2. RAM: 16GB
 3. HDD: SSD
 
-Naudojant List:
-1000 Duomenų rūšiavimas užtruko: 0.00105775 s
+3 strategijos spartos analizė su vektoriais lyginant struct ir class:
+ | Failo dydis | *struct* | *class* |
+  |:---|:-------------:|:-------------:|
+  | *1000*     | 0.0007 s | 0.0001 s |
+  | *10000*    | 0.0058 s | 0.0004 s |
+  | *100000*   | 0.2722 s | 0.0443 s | 
+  | *1000000*  | 0.2749 s | 0.0427 s | 
+  | *10000000* | 3.2691 s | 0.4789 s |
 
-Kietiakų spausdinimas užtruko: 0.00314454 s
-
-Vargsiukų spausdinimas užtruko: 1.67e-07 s
-
-Duomenų įrašymas į failus užtruko: 0.00219242 s
-
-1000 Duomenų visos programos vykdymas užtruko: 4.37981 s
-
-10000 Duomenų rūšiavimas užtruko: 0.00904271 s
-
-Kietiakų spausdinimas užtruko: 0.00787392 s
-
-Vargsiukų spausdinimas užtruko: 1.66e-07 s
-
-Duomenų įrašymas į failus užtruko: 0.00575467 s
-
-10000 Duomenų visos programos vykdymas užtruko: 5.2359 s
-
-100000 Duomenų rūšiavimas užtruko: 0.0385363 s
-
-Kietiakų spausdinimas užtruko: 0.078501 s
-
-Vargsiukų spausdinimas užtruko: 1.25e-07 s
-
-Duomenų įrašymas į failus užtruko: 0.0555265 s
-
-100000 Duomenų visos programos vykdymas užtruko: 5.88248 s
-
-1000000 Duomenų rūšiavimas užtruko: 0.380321 s
-
-Kietiakų spausdinimas užtruko: 0.761752 s
-
-Vargsiukų spausdinimas užtruko: 1.66e-07 s
-
-Duomenų įrašymas į failus užtruko: 0.519955 s
-
-1000000 Duomenų visos programos vykdymas užtruko: 13.6649 s
-
-10000000 Duomenų rūšiavimas užtruko: 4.82062 s
-
-Kietiakų spausdinimas užtruko: 8.46322 s
-
-Vargsiukų spausdinimas užtruko: 1.66e-07 s
-
-Duomenų įrašymas į failus užtruko: 6.29449 s
-
-10000000 Duomenų visos programos vykdymas užtruko: 101.239 s
+Flag analizė, vector, 3 strategija
 
 
+CLASS
+| Failo dydis | *1000000* | *10000000* | *exe* |
+  |:---|:-------------:|:-------------:|:------|
+  | *01*  | 0.0101 s | 0.3008 s | 65K |
+  | *02* | 0.0147 s | 0.2750 s | 63K |
+  | *03* | 0.0225 s | 0.3221 s | 63K |
 
-1. Sukūriau vektorių, padariau nuskaitymą.
-2. Pridėjau balo skaičiavimo pagal vidurkį ir medianą funkcijas bei spausdinimą į terminalą.
-3. Pridėjau galimybė naudoti generuotus duomenis pagal pasirinktus matmenis.
-4. Pridėjau lygiavimą rezultatų išspasudinime.
-5. Pakoregavau lygiavimą
-6. Pridėjau rūšiavimo funkciją pagal vardą.
-7. Padariau, kad rezulatai būtų spausdinami į failą.
-
-1. Pridėjau failų generavimo kodą;
-2. Suskaidžiau programą į atskirus failus.
-3. Pridėjau laiko matavimą bendroj programoje
-4. pataisiau pagrindinę programą, pridėjau laiko matavimą, pridėjau galimybę pasirinkti nuskaitomo failo dydį.
-5. Pridėjau testavimo rezulatatų išvedimą.
+  STRUCT
+  | Failo dydis | *1000000* | *10000000* |  *exe* |
+  |:---|:-------------:|:-------------:|:------|
+  | *01*  | 0.0845 s | 1.3286 s | 63K |
+  | *02* | 0.0743 s | 1.4800 s |64K |
+  | *03* | 0.0756 s | 1.4270 s |64K |

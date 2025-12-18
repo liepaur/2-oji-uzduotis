@@ -14,7 +14,6 @@ double mediana(std::vector<int> v) {
     }
 }
 
-<<<<<<< HEAD
 Studentas::Studentas() : egz_(0), galutinis_(0.0) {}
 
 Studentas::Studentas(const Studentas &other)
@@ -50,8 +49,6 @@ std::ostream& operator<<(std::ostream& os, const Studentas& st) {
     return os;
 }
 
-=======
->>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
 std::istream& Studentas::nuskaitymas(std::istream& is) {
     is >> vardas_ >> pavarde_;
     int paz;
@@ -60,16 +57,7 @@ std::istream& Studentas::nuskaitymas(std::istream& is) {
         nd_.push_back(paz);
     }
 
-<<<<<<< HEAD
     is >> egz_;
-=======
-    if(!nd_.empty()) {
-        egz_ = nd_.back();
-        nd_.pop_back();
-    } else {
-        egz_ = 0;
-    }
->>>>>>> c72fda8ab51ab5549801451e465eb91b17822bae
     return is;
 }
 
