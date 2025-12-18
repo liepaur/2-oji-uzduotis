@@ -1,10 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenu\u0328 mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/cmake_install.cmake",
-		"/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenu\u0328 mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/cmake_install.cmake",
-		"/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenu\u0328 mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/cmake_install.cmake",
-		"/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenu\u0328 mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/cmake_install.cmake"
+		"/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenu\u0328_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

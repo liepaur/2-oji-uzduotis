@@ -1,62 +1,6 @@
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/calculator_lib.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/run_tests.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/Experimental.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/Nightly.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/Continuous.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyMemoryCheck.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyStart.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyUpdate.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyConfigure.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyBuild.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyTest.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyCoverage.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlyMemCheck.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/NightlySubmit.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalStart.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalUpdate.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalConfigure.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalBuild.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalTest.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalCoverage.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalMemCheck.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ExperimentalSubmit.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousStart.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousUpdate.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousConfigure.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousBuild.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousTest.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousCoverage.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousMemCheck.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/ContinuousSubmit.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/test.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/edit_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/rebuild_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/list_install_components.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/install.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/install/local.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/install/strip.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/test.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/edit_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/rebuild_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/list_install_components.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/install.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/install/local.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/CMakeFiles/install/strip.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/gmock.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/gmock_main.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/test.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/edit_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/rebuild_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/list_install_components.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/install.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/install/local.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googlemock/CMakeFiles/install/strip.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/gtest.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/gtest_main.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/test.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/edit_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/rebuild_cache.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/list_install_components.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/install.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/install/local.dir
-/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų mokslas/2k. 2 semestras/Objektinis programavimas/objektinio_git/2-oji-uzduotis/build/googletest/googletest/CMakeFiles/install/strip.dir
+/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/core.dir
+/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/app.dir
+/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/runTests.dir
+/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/test.dir
+/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/edit_cache.dir
+/Users/Liepa/Library/CloudStorage/OneDrive-Personal/Duomenų_mokslas/2k._2_semestras/Objektinis_programavimas/objektinio_git/2-oji-uzduotis/build/CMakeFiles/rebuild_cache.dir

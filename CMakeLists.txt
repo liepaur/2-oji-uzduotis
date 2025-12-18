@@ -1,24 +1,28 @@
-cmake_minimum_required(VERSION 3.10)
-project(CalculatorProject CXX)
+cmake_minimum_required(VERSION 3.14)
+project(StudentuSistema)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_subdirectory(googletest)
+include_directories(include)
 
-add_library(calculator_lib
-    src/calculator.cpp
-    src/calculator.h
+add_library(core
+    src/studentas.cpp
+    src/funkcijos.cpp
 )
 
-target_include_directories(calculator_lib PUBLIC src)
 
-add_executable(run_tests tests/calculator_test.cpp)
-
-target_link_libraries(run_tests
-    calculator_lib       
-    gtest_main           
+add_executable(app
+    src/main.cpp
 )
 
-include(CTest)
-add_test(NAME AllTests COMMAND run_tests)
+target_link_libraries(app core)
+
+enable_testing()
+find_package(GTest REQUIRED)
+
+add_executable(runTests
+    tests/test_studentas.cpp
+)
+
+target_link_libraries(runTests core GTest::gtest GTest::gtest_main)
+add_test(NAME StudentTests COMMAND runTests)
