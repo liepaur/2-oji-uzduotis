@@ -20,24 +20,24 @@ private:
 
 public:
     Studentas();
+    Studentas(const std::string& vardas, const std::string& pavarde);
     Studentas(std::istream& is);
-    
+
     Studentas(const Studentas& other);
     Studentas& operator=(const Studentas& other);
     ~Studentas();
 
-    inline std::string vardas() const { return vardas_; }
-    inline std::string pavarde() const { return pavarde_; }
     inline double galutinis() const { return galutinis_; }
     inline const std::vector<int>& nd() const { return nd_; }
     inline int egz() const { return egz_; }
 
-    std::istream& nuskaitymas(std::istream& is);
+    std::istream& nuskaitymas(std::istream& is, bool interaktyvus = true);
     double skaiciuotiVidurki() const;
     double skaiciuotiMediana() const;
     void apskaiciuotiGalutini(bool naudotiMediana);
     void spausdinti(std::ostream& os) const override;
 };
+
 
 std::istream& operator>>(std::istream& is, Studentas& st);
 std::ostream& operator<<(std::ostream& os, const Studentas& st);

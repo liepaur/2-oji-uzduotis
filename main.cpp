@@ -1,5 +1,5 @@
 #include "funkcijos.h"
-#include "Studentas.h"
+#include "studentas.h"
 #include "Timer.h"
 #include <iostream>
 #include <vector>
