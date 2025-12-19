@@ -78,10 +78,9 @@ void Studentas::apskaiciuotiGalutini(bool naudotiMediana) {
 void Studentas::spausdinti(std::ostream& os) const {
     os << std::left << std::setw(15) << vardas()
        << std::left << std::setw(15) << pavarde()
-       << std::right << std::setw(5) << std::fixed << std::setprecision(2) << galutinis_;
+       << std::right << std::setw(5) << std::fixed << std::setprecision(2) << galutinis_ << std::endl;
 }
 
-// Friend funkcijos
 bool palyginimasVardas(const Studentas &a, const Studentas &b) { return a.vardas() < b.vardas(); }
 bool palyginimasPavarde(const Studentas &a, const Studentas &b) { return a.pavarde() < b.pavarde(); }
 bool palyginimasGalutinis(const Studentas &a, const Studentas &b) { return a.galutinis() < b.galutinis(); }

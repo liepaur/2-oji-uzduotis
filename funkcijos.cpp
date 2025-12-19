@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cstdlib>
 
-void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai){
+void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai) {
     std::ifstream in(failoVardas);
     if (!in.is_open()) {
         std::cout << "Nepavyko atidaryti failo: " << failoVardas << std::endl;
@@ -18,12 +18,12 @@ void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& student
     getline(in, eilute);
 
     while (getline(in, eilute)) {
+        if (eilute.empty()) continue;
         std::stringstream ss(eilute);
-        Studentas st;
+        Studentas st(ss); 
         st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
-    }
-
+}
     in.close();
 }
 
@@ -74,8 +74,8 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
     out << fixed << setprecision(2);
     out << std::left << setw(20) << "Vardas"
         << std::setw(20) << "Pavarde"
-        << std::setw(20) << "Galutinis (Vid.)"
-        << std::setw(20) << "Galutinis (Med.)"
+        << std::setw(20) << "Galutinis"
+        << std::setw(20) 
         << endl;
     out << "-----------------------------------------------------------------------" << endl;
     for (const auto& s : studentai){
