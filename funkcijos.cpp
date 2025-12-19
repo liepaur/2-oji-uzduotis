@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cstdlib>
 
-void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai){
+void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& studentai) {
     std::ifstream in(failoVardas);
     if (!in.is_open()) {
         std::cout << "Nepavyko atidaryti failo: " << failoVardas << std::endl;
@@ -18,14 +18,15 @@ void nuskaitymas(const std::string& failoVardas, std::vector<Studentas>& student
     getline(in, eilute);
 
     while (getline(in, eilute)) {
+        if (eilute.empty()) continue;
         std::stringstream ss(eilute);
-        Studentas st;
+        Studentas st(ss); 
         st.apskaiciuotiGalutini(false);
         studentai.push_back(st);
-    }
-
+}
     in.close();
 }
+
 
 void studentuGeneravimas(std::vector <Studentas>& studentai, int kiekis, int ndKiekis){
     for (int i = 0; i < kiekis; ++i){
@@ -48,7 +49,7 @@ void spausdinimas(std::vector<Studentas>& studentai){
     out << std::left << setw(20) << "Vardas"
          << std::setw(20) << "Pavarde"
          << std::setw(20) << "Galutinis (Vid.)"
-         << std::setw(20) << "Galutinis (Med.)" << endl;
+         << std::setw(20) << endl;
     out << std::string(60, '-') << endl;
 
     for(const auto& s: studentai)
@@ -75,8 +76,7 @@ void sugrupuotuSpausdinimas(const std::string& failoVardas, std::vector<Studenta
     out << std::left << setw(20) << "Vardas"
         << std::setw(20) << "Pavarde"
         << std::setw(20) << "Galutinis (Vid.)"
-        << std::setw(20) << "Galutinis (Med.)"
-        << endl;
+        << std::setw(20) << endl;
     out << "-----------------------------------------------------------------------" << endl;
     for (const auto& s : studentai){
         s.spausdinti(out);
@@ -89,7 +89,7 @@ void spausdinimasEkrane(std::vector<Studentas>& studentai){
     std:: cout << std::left << setw(20) << "Vardas"
          << std::setw(20) << "Pavarde"
          << std::setw(20) << "Galutinis (Vid.)"
-         << std::setw(20) << "Galutinis (Med.)" << endl;
+         << std::setw(20) << endl;
     std::cout << std::string(60, '-') << endl;
 
     for(const auto& s: studentai)

@@ -51,15 +51,25 @@ std::ostream& operator<<(std::ostream& os, const Studentas& st) {
 
 std::istream& Studentas::nuskaitymas(std::istream& is) {
     is >> vardas_ >> pavarde_;
-    int paz;
     nd_.clear();
+    int paz;
+    
     while (is >> paz) {
         nd_.push_back(paz);
     }
 
-    is >> egz_;
+    if (!nd_.empty()) {
+        egz_ = nd_.back();
+        nd_.pop_back();
+    } else {
+        egz_ = 0;
+    }
+
+    apskaiciuotiGalutini(false);
+
     return is;
 }
+
 
 double Studentas::skaiciuotiVidurki() const {
     if (nd_.empty()) return 0.0;
@@ -79,7 +89,7 @@ void Studentas::apskaiciuotiGalutini(bool naudotiMediana) {
 void Studentas::spausdinti(std::ostream& os) const {
     os << std::left << std::setw(15) << vardas_
        << std::left << std::setw(15) << pavarde_
-       << std::right << std::setw(5) << std::fixed << std::setprecision(2) << galutinis_;
+       << std::right << std::setw(5) << std::fixed << std::setprecision(2) << galutinis_ << std::endl;
 }
 
 bool palyginimasVardas(const Studentas &a, const Studentas &b) {
